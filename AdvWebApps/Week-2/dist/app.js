@@ -8,12 +8,15 @@ let vehicle = {
 };
 console.log(vehicle);
 ;
+;
+;
+;
 let car = {
     model: "Ford focus",
     color: "Green",
     year: 2016,
     power: 150,
-    bodyType: "Hatchback",
+    bodytype: "Hatchback",
     wheelCount: 4
 };
 let plane = {
@@ -33,3 +36,28 @@ let boat = {
 console.log(car);
 console.log(plane);
 console.log(boat);
+function coolFunction(param) {
+    return `jono`;
+}
+;
+let items;
+function genericVehicleService(param) {
+    return `genericVehicle parametri: ${param}`;
+}
+;
+function add(item) {
+    items.push(item);
+}
+;
+function list() {
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+    }
+}
+;
+console.log(genericVehicleService('moi'));
+let cars;
+let boats;
+add(car);
+add(boat);
+list();

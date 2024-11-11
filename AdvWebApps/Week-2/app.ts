@@ -70,3 +70,25 @@ console.log(boat);
 function coolFunction<T>(param: T): string {
     return `jono`
 };
+
+let items: TVehicle[];
+function genericVehicleService<T>(param: T): String {
+    return `genericVehicle parametri: ${param}`
+};
+function add(item: TVehicle) {
+    items.push(item);
+};
+function list() {
+    for (let i=0; i<items.length; i++) {
+        console.log(items[i]);
+    }
+};
+console.log(genericVehicleService('moi'));
+
+let cars;
+let boats;
+
+add(car);
+add(boat);
+
+list();
