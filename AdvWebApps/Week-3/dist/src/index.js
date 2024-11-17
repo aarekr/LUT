@@ -18,4 +18,17 @@ router.get("/echo/:id", (req, res) => {
     let answer = `id: ${id}`;
     res.json(answer);
 });
+router.post("/sum/:numbers", (req, res) => {
+    let numbers = req.params.numbers;
+    numbers = numbers.substring(1, numbers.length - 1);
+    let osat = numbers.split(",");
+    let sum = 0;
+    for (let i = 0; i < osat.length; i++) {
+        sum += Number(osat[i].trim());
+    }
+    let answer = {
+        "sum": sum
+    };
+    res.json(answer);
+});
 exports.default = router;

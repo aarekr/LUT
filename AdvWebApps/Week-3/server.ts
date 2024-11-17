@@ -11,7 +11,12 @@ app.use(express.urlencoded({extended: false}))
 app.use(morgan("dev"))
 
 app.use(express.static(path.join(__dirname, "../public")))
+app.use(express.static(path.join(__dirname, "../dist")))
 app.use("/", router)
+/*app.post('/', function (req, res) {
+    console.log("server.ts app.post:", req.body.name)
+    res.end();
+})*/
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`)
