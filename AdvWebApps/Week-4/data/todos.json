@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Jukka",
+        "todos": ["eka", "toka", "kolmas"]
+    },
+    {
+        "name": "Maija",
+        "todos": ["tiskaa", "vie roskat"]
+    }
+]
