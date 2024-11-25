@@ -2,9 +2,18 @@
 
 function initialize() {
     const addTodoButton = document.getElementById("submit-data")
-    addTodoButton.addEventListener('click', function() {
+    addTodoButton.addEventListener('click', async function() {
         const userInput = document.getElementById('userInput')
         const todoInput = document.getElementById('todoInput')
+        const todoData = await fetch("http://localhost:8000", {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: '{ "todo": ' + todoInput.value + '" }'
+        })
+        const todoJson = await todoData.json()
+        console.log("todoJson: ", todoJson)
         addNewTodo(todoInput.value)
     })
 
