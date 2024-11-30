@@ -10,7 +10,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const app = (0, express_1.default)();
 const port = 8000;
-const mongoDB = "mongodb://127.0.0.27017/todosdb";
+const mongoDB = "mongodb://127.0.0.27017/testdb";
 mongoose_1.default.connect(mongoDB);
 mongoose_1.default.Promise = Promise;
 const db = mongoose_1.default.connection;
