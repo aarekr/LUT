@@ -19,7 +19,7 @@ function App() {
     {
         id: 3,
         text: 'Kolmas',
-        day: 'KE',
+        day: 'Ke',
         reminder: false,
     },
   ])
